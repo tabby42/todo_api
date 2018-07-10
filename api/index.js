@@ -6,6 +6,8 @@ var todoRoutes = require('./routes/todos');
 // allow access to request body
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
+
+app.use(express.static(__dirname + '/public'));
 //access views folder
 app.use(express.static(__dirname + '/views'));
 
